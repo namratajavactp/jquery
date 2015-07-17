@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function() {
+        $.getJSON("car-sale1.json",function(results){alert(results);});
+    });
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

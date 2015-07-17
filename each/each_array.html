@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+var numberArray = [0,1,2,3,4,5];
+jQuery.each(numberArray , function(index, value){
+     alert(index + ':' + value); 
+});
+//outputs: 1:1 2:2 3:3 4:4 5:5
+
+var json = [ 
+    { "red": "#f00" },
+    { "green": "#0f0" },
+    { "blue": "#00f" }
+];
+
+alert("now json elements");
+$.each(json, function() {
+  $.each(this, function(name, value) {
+    /// do stuff
+   alert(name + '=' + value);
+  });
+});
+//outputs: red=#f00 green=#0f0 blue=#00f
+});
+
+</script>
+</head>
+<body>
+ iterate an array declared as:
+  var numberArray = [0,1,2,3,4,5];
+
+  var json = [ 
+    { "red": "#f00" },
+    { "green": "#0f0" },
+    { "blue": "#00f" }
+];  
+  
+ </body>
+ </html>

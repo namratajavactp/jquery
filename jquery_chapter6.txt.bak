@@ -1,0 +1,21 @@
+chapter 6- ajax
+------------------------------------------------------------------
+ajax - load function
+
+index.html
+----------
+<ul id="biographies">
+<li><a href="baronVonJovi.html">Baron von Jovi</a></li>
+<li><a href="computadors.html">The Computadors</a></li>
+<li><a href="darthFader.html">Darth Fader</a></li>
+<li><a href="moFat.html">Mo' Fat</a></li>
+</ul>
+<div id="biography">
+Click on a celeb above to find out more!
+</div>
+
+$('#biographies a').click(function(e) {
+  var url = $(this).attr('href');
+  $('#biography').load(url);
+  e.preventDefault();
+});

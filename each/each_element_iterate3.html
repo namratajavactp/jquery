@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  
+//outputs: every links href element on your web page
+$("button:first").click(function(){
+$.each($('.productDescription'), function(index, value) { 
+    alert(index + ':' + value); 
+});
+//1:object htmldivelement 2:object htmldivelement...
+});
+
+
+$("button:last").click(function(){
+$.each($('.productDescription'), function() { 
+    alert($(this).html());
+});
+//outputs: 1:Red 2:Orange 3:Green  });
+});
+
+
+});
+
+//outputs: every external href on your web page
+</script>
+</head>
+<body>
+<button>Alert the value of each list item using .each</button>
+<button>Alert the value of each list item using .each</button>
+<div class="productDescription">Red</div>
+<div class="productDescription">Orange</div>
+<div class="productDescription">Green</div>
+<p class="colors">  hi ha a </p>
+
+You don’t have to include index and value these are just parameters which help 
+determine which DOM element your currently iterating.
+ You could also write it like this:
+
+
+$.each($('.productDescription'), function() { 
+    console.log($(this).html());
+});
+
+$("div").each(function() { 
+    console.log($(this).html());
+});
+
+//outputs: Red Orange Green
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+	<style type="text/css">
+		
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.1.js">  </script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#car').click(function() {
+			$.get('data.xml',function(data){
+				$('#content').empty();
+				alert(data);
+				$(data).find('car').each(function(){
+					var $car = $(this);
+					var html = '<div class="data">';					  
+					html += '<h3>' + $car.attr('company') + '</h3>';
+					html += '<div class="product">' + $car.find('product').text() + '</div>';					
+					html += '<div class="type">' + $car.find('type').text() + '</div>';
+					var $colors = $car.find('colors');
+					if($colors.length){
+						html += '<div class="color">';	
+						html += '<ul>';	
+						$colors.find('color').each(function(){
+							html += '<li>' + $(this).text() + '</li>';									
+						});
+						html += '</ul>';				
+						html += '</div>';							
+					}
+					$('#content').append(html);
+				});						   
+			});
+			return false;
+		});
+	});
+
+	</script>
+</head>
+<body>
+
+<a href="#" id="car">Car</a>
+<div id="content">
+</div>
+</body>
+</html>

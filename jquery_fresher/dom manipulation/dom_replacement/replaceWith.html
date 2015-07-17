@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ </head>
+ <body>  
+ 
+   <div class="container"> 
+    <div class="inner first">Hello</div> 
+	<div class="inner second">And</div>
+	<div class="inner third">Goodbye</div></div>
+ <button>replace goodbye with hello</button>
+  
+  <script>
+  
+    // $('div.second').replaceWith('<h2>New heading</h2>');
+	// $('div.inner').replaceWith('<h2>New heading</h2>');
+	 $("button").click(function () {  $('div.third').replaceWith($('.first')); });
+    
+  </script> 
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+</head>
+<body>
+
+<label>Feeling: <input name=f type="text" oninput="check(this)"></label>
+<script>
+ function check(input) {
+   if (input.value == "good" ||
+       input.value == "fine" ||
+       input.value == "tired") {
+     input.setCustomValidity('"' + input.value + '" is not a feeling.');
+   } else {
+     // input is fine -- reset the error message
+     input.setCustomValidity('');
+   }
+ }
+</script>
+
+</body>
+</html>

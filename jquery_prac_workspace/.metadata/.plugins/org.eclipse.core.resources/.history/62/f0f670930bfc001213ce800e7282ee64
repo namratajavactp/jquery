@@ -1,0 +1,8 @@
+$(document).ready(function(){
+  $('#biographies a').click(function(e) {
+    var url = $(this).attr('href');
+    alert(url);
+    $('#biography').load(url);
+    e.preventDefault();
+  });
+});

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  div { color:blue; }
+  span { color:red; }
+  b { font-weight:bolder; }
+        </style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+ <b>Example: Set the id for divs based on the position in the page.</b>
+  <div>Zero-th <span></span></div>
+  <div>First <span></span></div>
+  <div>Second <span></span></div>
+ 
+<script>
+$("div").attr("id", function (i) {
+  alert(i);
+  return "div-id" + i;
+  
+})
+.each(function () {
+  alert(this);
+  $("span", this).html("(ID = '<b>" + this.id + "</b>')");
+});
+</script>
+ 
+</body>
+</html>

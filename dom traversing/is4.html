@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    li { cursor:pointer; }
+   </style>
+   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body> 
+ <ul id="browsers">
+ <li>Chrome</li>  
+ <li>Safari</li>
+ <li>Firefox</li>  
+ <li>Opera</li>
+ </ul>
+ 
+ <script> 
+  var $alt = $("#browsers li:nth-child(2n)").css("background", "#00FFFF");  
+  $('li').click(function() 
+                {    
+				  var $li = $(this);  
+				  if ( $li.is( $alt ) )
+				  {      $li.slideUp();    }
+				  else 
+				  {      $li.css("background", "red");    }  
+				 });
+</script>
+ </body>
+ </html>

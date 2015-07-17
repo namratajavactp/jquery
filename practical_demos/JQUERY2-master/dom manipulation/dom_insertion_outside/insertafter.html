@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>  
+ <style>
+   #foo { background:yellow; }
+ </style>  
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ </head>
+ <body>
+   <p> is what I said... </p>
+   <div id="foo">FOO!</div>
+   <script>
+     $("p").insertAfter("#foo");
+	 
+	 
+	// $("p").insertBefore("#foo");
+	 
+	 // Same as $("#foo").after("p")
+   </script>
+ </body>
+ </html>

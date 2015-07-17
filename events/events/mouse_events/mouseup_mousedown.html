@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>mousedown demo</title>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+<p>Press mouse and release here.</p>
+<script>
+$("p").mouseup(function(){
+$(this).append('<span style="color:#F00;">Mouse up.</span>');
+}).mousedown(function(){
+$(this).append('<span style="color:#00F;">Mouse down.</span>');
+});
+</script>
+</body>
+</html>

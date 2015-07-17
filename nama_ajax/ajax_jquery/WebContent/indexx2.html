@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<style> 
+  body{ font-size: 12px; font-family: Arial; } 
+</style>
+
+  <script src="http://code.jquery.com/jquery-1.9.1.js">  </script>
+  
+</head>
+
+<body>
+ 
+ This will load myname from name.jsp file:
+ <div id="myname"></div>
+
+ <script>
+  
+  /*
+  will POST the additional parameters to the server and a callback 
+  that is executed when the server is finished responding. */
+  
+  $("#myname").load("name.jsp", {myname: "nisha"}, function(){alert("The name has been loaded");});
+ </script> 
+
+  
+
+  </body>
+  </html>

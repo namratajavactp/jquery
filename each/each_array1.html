@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+
+$.each([52, 97], function(index, value) {
+  alert(index + ': ' + value);
+});
+});
+});
+</script>
+
+<html>
+<body>
+<button>Alert the value of each list item using .each</button>
+</body>
+</html>

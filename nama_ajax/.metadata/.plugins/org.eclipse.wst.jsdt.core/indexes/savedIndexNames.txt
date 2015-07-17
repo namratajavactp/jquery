@@ -1,0 +1,9 @@
+INDEX VERSION 1.122+D:\jquery\nama_ajax\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3377075485.index
+439363058.index
+3207501751.index
+1501936565.index
+3220956405.index
+224939556.index
+3201930013.index
+3073190193.index

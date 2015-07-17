@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head> 
+ <style>
+    p { background:yellow; margin:6px 0; }
+  </style> 
+
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+  <p class="hello">Hello</p>  
+  how are  
+  
+  <p>you?</p> 
+  <button>Call remove(":contains('Hello')") on paragraphs</button>
+
+ <script>
+
+           $("button").click(function () 
+                 { 
+       				 $("p").remove(":contains('Hello')");
+					 // $("p").filter(":contains('Hello')").remove().
+				  });
+					 
+ </script> 
+</body>
+</html>

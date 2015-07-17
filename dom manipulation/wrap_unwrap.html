@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head> 
+ <style> 
+  div { border: 2px solid blue; }  
+  p { background:yellow; margin:4px; }  
+</style> 
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ </head>
+ 
+ <body> 
+   <button>wrap/unwrap</button>
+   <p>Hello</p>
+   <p>cruel</p>
+   <p>World</p>
+   <script>
+     var pTags = $("p");
+	 $("button").click( function()
+	                    { 
+     						if ( pTags.parent().is("div") ) 
+							{    pTags.unwrap();  } 
+							else 
+							{    pTags.wrap("<div></div>");  }
+						});
+	</script>
+	</body>
+	</html>

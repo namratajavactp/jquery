@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>div { color:red; }</style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body> 
+
+  <form>
+    <input type="checkbox" />
+  </form>
+  
+  <div></div>
+  
+  <script>
+    var isFormParent = $("input[type='checkbox']").parent().is("form");  
+	$("div").text("isFormParent = " + isFormParent);
+	
+	/*
+	
+	<!DOCTYPE html>
+	<html>
+	<head> 
+    	<style> div { color:red; }</style> 
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	</head>
+	<body>
+    	<form>
+		  <p> <input type="checkbox" /></p>
+		</form>  
+		<div></div>
+		<script>  
+		  var isFormParent = $("input[type='checkbox']").parent().is("form"); 
+		  $("div").text("isFormParent = " + isFormParent);
+		</script> 
+	</body>
+	</html>
+
+    */
+	</script>
+ </body>
+ </html>
+ 

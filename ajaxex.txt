@@ -1,0 +1,27 @@
+asynchronous requests:
+
+1. server- returning json from jsp
+   client - using javascript ajax call-get to get JSON from jsp
+   (uses xmlHttpRequest object and javascript eval function) 
+
+2. server- returning json from jsp
+   client - using jquery $.get to get JSON from jsp - type of get should be 'json'
+
+
+3. server - returning pure JSON object from file *.json
+   client - using jquery $.getJSON to read from *.json from server
+
+
+4. server - returning html response from jsp page
+   client - using jquery $.load to load a jsp response 
+
+5. server - returning html response from jsp page  
+   client - using jquery $.get to send http get request  to a jsp and get jsp response
+
+6. server - returning html response from jsp page  
+   client - using jquery $.post to post data using http post to a jsp and get jsp response
+ 
+7. server - returning  JSON object from file *.xml
+   client - using jquery $.get to read JSON from xml file from server
+
+8. generic $.ajax call

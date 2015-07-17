@@ -1,0 +1,40 @@
+<!DOCTYPE html><html>
+<head> 
+ <style>
+   div { width:60px; height:60px; margin:10px; float:left; border:2px solid blue; } 
+   .blue { background:blue; }
+  </style> 
+
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ </head>
+ 
+ <body> 
+   <div></div>  
+   <div></div> 
+   <div></div>  
+   <div></div> 
+   <div></div>
+   <div></div>
+   
+   <table border="1">  
+     <tr><td>TD #0</td>
+	     <td>TD #1</td>
+		 <td>TD #2</td>
+	 </tr>
+	 <tr><td>TD #3</td>
+	     <td>TD #4</td>
+		 <td>TD #5</td>
+	 </tr> 
+	 <tr><td>TD #6</td>
+	     <td>TD #7</td>
+		 <td>TD #8</td>
+	 </tr>
+	</table>
+   
+   <script>
+  //   $("body").find("div").eq(2).addClass("blue");
+     $("div:eq(2)").addClass("blue");
+	 $("td:eq(2)").css("color", "red");
+   </script>
+  </body>
+  </html>

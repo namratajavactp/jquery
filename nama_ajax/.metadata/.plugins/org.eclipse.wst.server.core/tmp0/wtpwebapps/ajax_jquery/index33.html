@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<style> 
+  body{ font-size: 12px; font-family: Arial; } 
+</style>
+
+  <script src="http://code.jquery.com/jquery-1.9.1.js">  </script>
+  
+</head>
+
+<body>
+ 
+ This will load myname and surname from name.jsp file:
+ <div id="myname"></div>
+
+ <script>
+  
+  /*
+  issue asynchronous GET request along with the additional parameters to the server as query string and a callback 
+  that is executed when the server is finished responding. 
+  
+  $("#myname").load("namee.jsp", 'myname=namrata&surname=marathe', function(){alert("The name has been loaded");}); */
+  
+  
+  $.get('namee.jsp', { myname: "Namrata", surname: "Marathe" },function(data) {  $('#myname').html(data);  alert('get was performed.');});
+ </script> 
+  </body>
+  </html>

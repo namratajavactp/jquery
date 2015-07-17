@@ -1,0 +1,174 @@
+chapter 3- animating,scrolling and resizing
+----------------------------------------------------------
+1.
+$('p').animate({
+padding: '20px',
+fontSize: '30px'
+}, 2000);
+-----------------------------------------------------------
+2. see right side navigation links wobble
+
+$('#navigation li').hover(
+function() {
+	$(this).animate({paddingLeft: '+=15px'}, 200);
+	}, 
+function() {
+	$(this).animate({paddingLeft: '-=15px'}, 200);
+});
+-------------------------------------------------------------------
+3.
+
+$('#disclaimer').animate({
+opacity: 'hide',
+height: 'hide'
+}, 'slow');
+
+You can also use animate to achieve fine-grained control over the showing, hiding,
+and toggling functions
+------------------------------------------------------------------------------------
+4.
+color animation - color-calculating functionality is omitted from the core library.
+If you want to animate color,
+you’re going to need to download the Color Animations plugin.- jquery.color.js
+
+$('#disclaimer').animate({'backgroundColor':'#ff9f5f'}, 2000);
+
+
+http://plugins.jquery.com/project/color
+http://plugins.jquery.com/
+
+-------------------------------------------------------------------------------------
+5. easing animation:
+
+$('p:first').toggle(function() {
+		$(this).animate({'height':'+=150px'}, 2000, 'linear');
+	}, function() {
+		$(this).animate({'height':'-=150px'}, 2000, 'swing');
+	});
+
+http://plugins.jquery.com/project/Easing
+--------------------------------------------------------------------------------------
+6.
+
+$('p:first').animate({height: '+=300px'}, 2000, 'easeOutBounce');
+$('p:first').animate({height: '-=300px'}, 2000, 'easeInOutExpo');
+$('p:first').animate({height: 'hide'}, 2000, 'easeOutCirc');
+$('p:first').animate({height: 'show'}, 2000, 'easeOutElastic');
+------------------------------------------------------------------------------------
+7. bouncy content panes:
+
+<section id="bio">
+	<h2>Who’s Hot Right Now?</h2>
+	<h3>Beau Dandy</h3>
+   <div>
+	<img src="../images/beau_100.jpg" width="100" height="100" alt="Beau Dandy"/>
+	<p>Content about Beau Dandy</p>
+   </div>
+
+	<h3>Johnny Stardust</h3>
+   <div>
+	<img src="../images/johnny_100.jpg" width="100" height="100" alt="Johnny Stardust"/>
+	<p>Content about Johnny Stardust</p>
+   </div>
+</section>
+
+$('#bio > div').hide();
+$('#bio > div:first').show();
+
+$('#bio h3').click(function() {
+  $(this).next().animate(
+  {'height':'toggle'}, 'slow', 'easeOutBounce' );
+  });
+-----------------------------------------------------------------------------------------
+8.
+
+$('p:first').animate(
+{
+height: '+=100px',
+color: 'green'
+},
+{
+duration: 'slow',
+easing: 'swing',
+complete: function() {alert('done!');},
+queue: false
+}
+);
+If you disable the queue when
+you specify an animation, further animations can run in parallel.
+-----------------------------------------------------------------------------------------
+Pausing the Chain:it will delay the queue for that many milliseconds
+before continuing.
+
+$('p:first')
+.hide()
+.slideDown('slow')
+.delay(2000)
+.fadeOut();
+--------------------------------------------------------------------------------------
+9. animated navigation
+
+10. animated_navigation_2
+--------------------------------------------------------------------------------
+11.
+jquery UI - The download builder page,which you can reach by clicking the Build custom 
+download link from the jQuery UI home page.
+The download builder is broken into several sections: Core, Interaction, Widgets,
+Effects, and Themes. 
+
+css - contains themes folder
+lib - jquery-ui lib
+
+Effects package that enables us to implement some interesting effects.
+It also includes useful methods and functionality for doing advanced animation. 
+We’ve seen some of this functionality already,in Color Animation plugin and the Easing plugin
+
+$('p:first')
+.effect('shake', {times:3}, 300)
+.effect('highlight', {}, 3000)
+.hide('explode', {}, 1000);
+
+Some of them can only be used in this way, via the effect action, while others can be used
+this way or in place of hide, show, or toggle parameters. Some examples of the
+latter are blind, clip, puff, fold, and slide.
+---------------------------------------------------------------------------------
+12. scrolling
+
+#news {
+height: 100px;
+width: 300px;
+overflow: scroll;
+}
+
+$('#news').scroll(function() {
+$('#header')
+.append('<span class="scrolled">You scrolled!</span>');
+});
+
+http://plugins.jquery.com/project/ScrollTo
+http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+
+$('div#scrolly').scrollTo(0, 'slow').
+You can pass in a relative value (like +=50px), a DOM element (it will scroll
+the page to find that element), a selector string, a hash value containing x and y coordinates,
+or the keyword max, which will scroll to the end of the document. You
+can scroll horizontally as well as vertically,
+-----------------------------------------------------------------------------------------
+15. page scroll
+$('a[href=#]').click(function(e) {
+$.scrollTo(0,'slow');
+e.preventDefault();
+});
+---------------------------------------------------------------------------------------
+16. creating custom scrollbar
+
+$('#fine_print').jScrollPane({
+verticalGutter: 20
+});
+
+jquery.mousewheel.js
+
+http://jscrollpane.kelvinluck.com/
+http://plugins.jquery.com/project/mousewheel
+----------------------------------------------------------------------------------------------
+17.

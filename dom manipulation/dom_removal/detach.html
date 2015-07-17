@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head> 
+ <style>
+ 
+ p { background:yellow; margin:6px 0; }
+ p.off { background: black; }
+ 
+ </style> 
+
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ </head>
+ 
+ <body>  
+   <p>Hello</p>  
+   how are 
+   <p>you?</p> 
+   <button>Attach/detach paragraphs</button>
+   
+   <script>
+
+      $("p").click(function(){      $(this).toggleClass("off");    });  
+	  var a;   
+	  $("button").click(function()
+	                    {      if ( a )
+          						{      
+								  
+											a.appendTo("body");      
+            								a = null;     
+								}
+								else 
+								{ 
+								       
+         								a = $("p").detach();   
+								}  
+							});
+							
+	</script> 
+	</body>
+	</html>

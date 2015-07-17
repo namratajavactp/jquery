@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+ 
+<img title="hat.gif"/>
+ 
+<script>
+$(document).ready(function(){
+$("img").attr("src", function() {
+    return "resources/" + this.title;
+});
+
+
+});
+</script>
+ 
+</body>
+</html>

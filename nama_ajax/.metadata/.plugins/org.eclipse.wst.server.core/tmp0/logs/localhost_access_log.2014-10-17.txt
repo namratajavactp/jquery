@@ -1,0 +1,8 @@
+127.0.0.1 - - [17/Oct/2014:16:03:58 +0530] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [17/Oct/2014:16:03:59 +0530] "GET /ajax_jquery/ HTTP/1.1" 404 975
+0:0:0:0:0:0:0:1 - - [17/Oct/2014:16:04:18 +0530] "GET /ajax_jquery/getjson11.html HTTP/1.1" 200 792
+0:0:0:0:0:0:0:1 - - [17/Oct/2014:16:04:22 +0530] "GET /ajax_jquery/data11.json HTTP/1.1" 200 338
+0:0:0:0:0:0:0:1 - - [17/Oct/2014:16:04:57 +0530] "GET /ajax_jquery/getjson12.html HTTP/1.1" 200 1066
+0:0:0:0:0:0:0:1 - - [17/Oct/2014:16:21:43 +0530] "GET /ajax_jquery/namee.jsp HTTP/1.1" 200 341
+0:0:0:0:0:0:0:1 - - [17/Oct/2014:16:22:27 +0530] "GET /ajax_jquery/index33.html HTTP/1.1" 200 786
+0:0:0:0:0:0:0:1 - - [17/Oct/2014:16:22:27 +0530] "GET /ajax_jquery/namee.jsp?myname=John&surname=marathe HTTP/1.1" 200 344

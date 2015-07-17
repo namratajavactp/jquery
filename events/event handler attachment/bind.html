@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+     p { background:yellow; font-weight:bold; cursor:pointer;padding:5px; }
+	 p.over { background: #ccc; }span { color:red; }
+  </style> 
+
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>  
+  <p>Click or double click here.</p>
+  <span></span>
+  
+  <script>
+   $("p").bind("click", function(event)
+                       {
+					        var str = "( " + event.pageX + ", " + event.pageY + " )";
+							$("span").text("Click happened! " + str);
+						});
+   $("p").bind("dblclick", function()
+                          {
+						       $("span").text("Double-click happened in " + this.nodeName);
+						   });
+    $("p").bind("mouseenter mouseleave", function(event)
+	                                    {$(this).toggleClass("over");}); 
+										
+										
+	//$("p").bind("click", function(){alert( $(this).text() );});
+	
+	/*
+	  //You can pass some extra data before the event handler: 
+	   function handler(event)
+	   {
+	      alert(event.data.foo);
+		}
+		
+		$("p").bind("click", {foo: "bar"}, handler)  
+		
+		
+Example: Cancel a default action and prevent it from bubbling up by returning false:
+ 
+
+$("form").bind("submit", function() { return false; }) 
+
+
+Example: Cancel only the default action by using the .preventDefault() method. 
+
+ 
+$("form").bind("submit", function(event) {event.preventDefault();}); 
+
+		
+		*/
+  </script>
+  </body>
+  </html>

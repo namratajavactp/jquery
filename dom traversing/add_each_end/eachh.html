@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Selectors By Attributes</title>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+   $('p').each(function(i){
+       var paraCont = $(this).text();
+	   if(paraCont == 'Hello'){
+	      $(this).css('background-color', 'red');
+	   }
+   });
+});
+</script>
+</head>
+<body>
+<div title="first">
+<span>Name : </span><input type="text"/>
+</div>
+<div title="second">
+<span>Password : </span><input type="password"/>
+</div>
+
+<p>Hello</p>
+<p>Hello1</p>
+<p>Hello2</p>
+
+
+</body>
+</html>

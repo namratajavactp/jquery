@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#abc").click(function(){
+      $('a').each(function(index, value){
+      alert($(this).attr('href'));
+       });
+	  });
+//outputs: every links href element on your web page
+$("button:last").click(function(){
+$('a').each(function(index, value){
+    var ihref = $(this).attr('href');
+    if (ihref.indexOf("http") >= 0) 
+    {
+       alert(ihref+'<br/>');
+    }
+   });
+  });
+});
+
+
+
+
+//outputs: every external href on your web page
+</script>
+</head>
+<body>
+<button id="abc">Alert the value of each list item</button>
+<button>Alert the value of each list item which are https</button>
+
+<a href="http://www.jquery4u.com">JQUERY4U</a>
+<a href="http://www.phpscripts4u.com">PHP4U</a>
+<a href="abc.com">interct</a>
+<a href="http://www.blogoola.com">BLOGOOLA</a>
+
+</body>
+</html>

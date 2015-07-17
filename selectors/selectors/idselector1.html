@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  div {    width: 90px;    height: 90px;    float:left;    padding: 5px;    margin: 5px;    background-color: #EEEEEE;  }  </style> 
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  </head>
+  <body>
+     <div id="notMe"><p>id="notMe"</p></div> 
+	 <div id="myDiv">id="myDiv"</div>
+	  <br/> <br/> <br/> <br/>
+	 <div id="myID.entry[0]">id="myID.entry[0]"</div> 
+	 <div id="myID.entry[1]">id="myID.entry[1]"</div>  
+	 <div id="myID.entry[2]">id="myID.entry[2]"</div>
+
+	 <script>
+	   $( "#myDiv" ).css( "border","3px solid red" );
+	   $( "#myID\\.entry\\[1\\]" ).css( "border", "3px solid yellow" );
+	 </script>
+ </body>
+ </html>

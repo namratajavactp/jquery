@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<script>
+
+    $(document).ready(function() {
+    	$.getJSON("car-sale1.json", function(data){
+           
+ 
+            /* loop through array */
+            $.each(data, function(index, d){           
+               alert("Manufacturer : "+d.Manufacturer
+                          + "Sold : "+ d.Sold
+                          + "Month : "+ d.Month);
+            });
+ 
+    });
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

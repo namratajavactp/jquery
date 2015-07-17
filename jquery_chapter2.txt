@@ -1,0 +1,117 @@
+chapter 2-
+--------------------------------------------------------------------------------
+$('#celebs tr').remove(':contains("Singer")');
+------------------------------------------------------------------------
+$('<div>', {
+id: 'specialButton',
+text: 'Click Me!',
+click: function(){
+alert("Advanced jQuery!")
+}
+}).insertBefore('#disclaimer');
+---------------------------------------------------------------------
+$('<strong>START!</strong>').prependTo('#disclaimer');
+$('<strong>END!</strong>').appendTo('#disclaimer');
+----------------------------------------------------------------------
+$('p').html('<b>good bye, cruel paragraphs!</b>');
+$('h2').text('All your titles are belong to us');
+---------------------------------------------------------------------------
+$('p').html('<strong>Warning!</strong> Text has been replaced … ');
+$('h2').text('<strong>Warning!</strong> Title elements can be …');
+------------------------------------------------------------------------------
+alert($('h2:first').text());
+----------------------------------------------------------------------------
+$('#hideButton').click(function() {
+$('#disclaimer').fadeOut();
+});
+replacing hide() with fadeOut
+----------------------------------------------------------------------------
+$('#toggleButton').click(function() {
+$('#disclaimer').toggle('slow');
+});
+normal toggle() function can animate if we pass time -slow,fast to it....
+----------------------------------------------------------------------------------
+$('#toggleButton').click(function() {
+$('#disclaimer').slideToggle('slow');
+});
+slidedown,slideup effect using slideToggle - better than toggle('slow')....
+---------------------------------------------------------------------------------------
+$('#disclaimer').slideToggle('slow', function() {
+alert('The slide has finished sliding!')
+});
+callback - gets called after the sliding effect is finished.
+Its using anonymous function- you can still write function elsewhere and call it here...
+-----------------------------------------------------------------------------------------
+29.
+
+$('#disclaimer').slideUp('slow', function() {
+$('#hideButton').fadeOut();
+});
+The disclaimer will slide up, and only once that animation is complete will the
+button fade from view.
+-------------------------------------------------------------------------------------------
+30.
+<style>
+tr.zebraHover {
+background-color: #FFFACD;
+}
+</style>
+
+$('#celebs tbody tr').mouseover(function() {
+		$(this).addClass('zebraHover');
+	});
+$('#celebs tbody tr').mouseout(function() {
+		$(this).removeClass('zebraHover');
+	});
+------------------------------------------------------------------------------------------
+31.
+<style>
+ tr.zebraHover {
+ background-color: #FFFACD;
+}
+</style>
+
+$('#celebs tbody tr').hover(
+function() {
+	$(this).addClass('zebraHover');
+	}, 
+function() {
+	$(this).removeClass('zebraHover');
+});
+hover can be used to replace mouseover and mouseout...
+-------------------------------------------------------------------------------------------
+32.
+        $('#celebs tbody tr').click(function() {
+		$(this).toggleClass('zebraHover');
+	});
+The toggleClass action accepts multiple
+class names too, if you separate them by spaces.
+-----------------------------------------------------------------------------------------
+33.
+
+<div id="news">
+   
+<h2>Latest News</h2>
+
+<p>
+  Which member of the seminal calypso/lectro band <em>C&amp;C Music Sweatshop</em> was 
+  spotted last night at <em>Dirt</em>, the trendy New York restaurant that serves only food
+  caught and retrieved by the chef's own hands?
+         
+  <span class="spoiler">Yes! It's the ever-effervescent, <em>Glendatronix</em>!</span>
+ 
+ </p>
+ 
+ <p>
+  Who lost their recording contract today? <span class="spoiler">The Zaxntines!</span>
+ </p>
+  
+ </div>
+
+ $('.spoiler').hide();
+ $('<input type="button" class="revealer" value="Tell Me!"/>').insertBefore('.spoiler');
+ $('.revealer').click(function(){
+	 $(this).hide();
+	 $(this).next().fadeIn();
+	});
+------------------------------------------------------------------------------------------------

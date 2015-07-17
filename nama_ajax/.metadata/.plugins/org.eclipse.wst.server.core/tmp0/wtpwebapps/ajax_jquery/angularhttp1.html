@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+
+  <div ng-controller="MyController" >
+    <button ng-click="myData.doClick(item, $event)">Send AJAX Request</button>
+    <br/>
+    Data from server: {{myData.fromServer}}
+  </div>
+
+  <script>
+    angular.module("myapp", [])
+        .controller("MyController", function($scope, MyService) {
+            $scope.myData = {};
+            
+            $scope.myData.doClick = function(item, event) {
+
+              $scope.myData.fromServer = MyService.func();
+              
+              responsePromise.success(function(data, status, headers, config) {
+                  //   $scope.myData.fromServer = data.title;
+                 
+               	alert("AJAX Success!"+data);
+               	$scope.myData.fromServer = data;
+               	
+               });
+               responsePromise.error(function(data, status, headers, config) {
+                   alert("AJAX failed!");
+                  
+               });
+               
+               
+              
+              
+            }
+
+
+        } )
+        .service("MyService",function($http){
+        	
+         this.func = function()
+        	 {
+        	    var responsePromise = $http.get("json1.jsp");
+/*
+                responsePromise.success(function(data, status, headers, config) {
+                 //   $scope.myData.fromServer = data.title;
+                
+              	alert("AJAX Success!"+data);
+              	return(data);
+              });
+              responsePromise.error(function(data, status, headers, config) {
+                  alert("AJAX failed!");
+                  return("failed");
+              }); */
+        	  return responsePromise;
+        	 }
+        	
+        });
+  </script>
+
+</body>
+
+</html>

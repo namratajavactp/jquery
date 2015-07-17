@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button:first").click(function(){
+    $("p").hide(1000);});
+
+   $("button:last").click(function(){
+    $("p").show(1000);  });
+});
+</script>
+</head>
+<body>
+<button>Hide</button>
+<button>Show</button>
+<p>This is a paragraph with little content.</p>
+<p>This is another small paragraph.</p>
+</body>
+</html>
